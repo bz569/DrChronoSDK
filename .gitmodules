@@ -1,0 +1,6 @@
+[submodule "Externals/OAuthSwift"]
+	path = Externals/OAuthSwift
+	url = https://github.com/OAuthSwift/OAuthSwift
+[submodule "Externals/swifter"]
+	path = Externals/swifter
+	url = https://github.com/httpswift/swifter

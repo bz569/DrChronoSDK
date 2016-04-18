@@ -8,12 +8,112 @@
 
 /* Begin PBXBuildFile section */
 		B22BEABB1CC050320058ACF1 /* DrChronoSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B22BEABA1CC050320058ACF1 /* DrChronoSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B22BEAC31CC050BD0058ACF1 /* DrChrono.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22BEAC21CC050BD0058ACF1 /* DrChrono.swift */; };
+		B22BEAF21CC0511F0058ACF1 /* Swifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22BEAEB1CC051170058ACF1 /* Swifter.framework */; };
+		B22BEAF31CC051270058ACF1 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22BEAD01CC051040058ACF1 /* OAuthSwift.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B22BEACF1CC051040058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEAC51CC051040058ACF1 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F435027A1A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
+		B22BEAD11CC051040058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEAC51CC051040058ACF1 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F451E3C5195B8CD80051434C;
+			remoteInfo = OAuthSwiftDemo;
+		};
+		B22BEAD31CC051040058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEAC51CC051040058ACF1 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
+			remoteInfo = OAuthSwiftOSX;
+		};
+		B22BEAD51CC051040058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEAC51CC051040058ACF1 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
+			remoteInfo = OAuthSwiftOSXDemo;
+		};
+		B22BEAD71CC051040058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEAC51CC051040058ACF1 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
+			remoteInfo = OAuthSwiftTVOS;
+		};
+		B22BEAD91CC051040058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEAC51CC051040058ACF1 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C40890C01C11B37000E3146A;
+			remoteInfo = OAuthSwiftWatchOS;
+		};
+		B22BEADB1CC051040058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEAC51CC051040058ACF1 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
+			remoteInfo = OAuthSwiftTests;
+		};
+		B22BEAE61CC051170058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEADD1CC051170058ACF1 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7C839B6E19422CFF003A6950;
+			remoteInfo = SwifterSampleiOS;
+		};
+		B22BEAE81CC051170058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEADD1CC051170058ACF1 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7CA4813B19A2EA8D0030B30D;
+			remoteInfo = SwifterSampleOSX;
+		};
+		B22BEAEA1CC051170058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEADD1CC051170058ACF1 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7AE893E71C05127900A29F63;
+			remoteInfo = SwifteriOS;
+		};
+		B22BEAEC1CC051170058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEADD1CC051170058ACF1 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7AE893FB1C0512C400A29F63;
+			remoteInfo = SwifterMac;
+		};
+		B22BEAEE1CC051170058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEADD1CC051170058ACF1 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7CCD875C1C66099B0068099B;
+			remoteInfo = SwifteriOSTests;
+		};
+		B22BEAF01CC051170058ACF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B22BEADD1CC051170058ACF1 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7CCD87791C660EA30068099B;
+			remoteInfo = SwifterOSXTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B22BEAB71CC050320058ACF1 /* DrChronoSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DrChronoSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22BEABA1CC050320058ACF1 /* DrChronoSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrChronoSDK.h; sourceTree = "<group>"; };
 		B22BEABC1CC050320058ACF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B22BEAC21CC050BD0058ACF1 /* DrChrono.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrChrono.swift; sourceTree = "<group>"; };
+		B22BEAC51CC051040058ACF1 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = Externals/OAuthSwift/OAuthSwift.xcodeproj; sourceTree = SOURCE_ROOT; };
+		B22BEADD1CC051170058ACF1 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = Externals/swifter/Swifter.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +121,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22BEAF31CC051270058ACF1 /* OAuthSwift.framework in Frameworks */,
+				B22BEAF21CC0511F0058ACF1 /* Swifter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,6 +132,7 @@
 		B22BEAAD1CC050320058ACF1 = {
 			isa = PBXGroup;
 			children = (
+				B22BEAC41CC050FA0058ACF1 /* External */,
 				B22BEAB91CC050320058ACF1 /* DrChronoSDK */,
 				B22BEAB81CC050320058ACF1 /* Products */,
 			);
@@ -46,10 +149,48 @@
 		B22BEAB91CC050320058ACF1 /* DrChronoSDK */ = {
 			isa = PBXGroup;
 			children = (
+				B22BEAC21CC050BD0058ACF1 /* DrChrono.swift */,
 				B22BEABA1CC050320058ACF1 /* DrChronoSDK.h */,
 				B22BEABC1CC050320058ACF1 /* Info.plist */,
 			);
 			path = DrChronoSDK;
+			sourceTree = "<group>";
+		};
+		B22BEAC41CC050FA0058ACF1 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				B22BEADD1CC051170058ACF1 /* Swifter.xcodeproj */,
+				B22BEAC51CC051040058ACF1 /* OAuthSwift.xcodeproj */,
+			);
+			name = External;
+			path = DrChronoSDK;
+			sourceTree = "<group>";
+		};
+		B22BEAC61CC051040058ACF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B22BEAD01CC051040058ACF1 /* OAuthSwift.framework */,
+				B22BEAD21CC051040058ACF1 /* OAuthSwiftDemo.app */,
+				B22BEAD41CC051040058ACF1 /* OAuthSwift.framework */,
+				B22BEAD61CC051040058ACF1 /* OAuthSwiftOSXDemo.app */,
+				B22BEAD81CC051040058ACF1 /* OAuthSwift.framework */,
+				B22BEADA1CC051040058ACF1 /* OAuthSwift.framework */,
+				B22BEADC1CC051040058ACF1 /* OAuthSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B22BEADE1CC051170058ACF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B22BEAE71CC051170058ACF1 /* SwifterSampleiOS.app */,
+				B22BEAE91CC051170058ACF1 /* SwifterSampleOSX */,
+				B22BEAEB1CC051170058ACF1 /* Swifter.framework */,
+				B22BEAED1CC051170058ACF1 /* Swifter.framework */,
+				B22BEAEF1CC051170058ACF1 /* SwifteriOSTests.xctest */,
+				B22BEAF11CC051170058ACF1 /* SwifterOSXTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,12 +249,116 @@
 			mainGroup = B22BEAAD1CC050320058ACF1;
 			productRefGroup = B22BEAB81CC050320058ACF1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B22BEAC61CC051040058ACF1 /* Products */;
+					ProjectRef = B22BEAC51CC051040058ACF1 /* OAuthSwift.xcodeproj */;
+				},
+				{
+					ProductGroup = B22BEADE1CC051170058ACF1 /* Products */;
+					ProjectRef = B22BEADD1CC051170058ACF1 /* Swifter.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B22BEAB61CC050320058ACF1 /* DrChronoSDK */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B22BEAD01CC051040058ACF1 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = B22BEACF1CC051040058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEAD21CC051040058ACF1 /* OAuthSwiftDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftDemo.app;
+			remoteRef = B22BEAD11CC051040058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEAD41CC051040058ACF1 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = B22BEAD31CC051040058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEAD61CC051040058ACF1 /* OAuthSwiftOSXDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftOSXDemo.app;
+			remoteRef = B22BEAD51CC051040058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEAD81CC051040058ACF1 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = B22BEAD71CC051040058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEADA1CC051040058ACF1 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = B22BEAD91CC051040058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEADC1CC051040058ACF1 /* OAuthSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuthSwiftTests.xctest;
+			remoteRef = B22BEADB1CC051040058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEAE71CC051170058ACF1 /* SwifterSampleiOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterSampleiOS.app;
+			remoteRef = B22BEAE61CC051170058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEAE91CC051170058ACF1 /* SwifterSampleOSX */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = SwifterSampleOSX;
+			remoteRef = B22BEAE81CC051170058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEAEB1CC051170058ACF1 /* Swifter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Swifter.framework;
+			remoteRef = B22BEAEA1CC051170058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEAED1CC051170058ACF1 /* Swifter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Swifter.framework;
+			remoteRef = B22BEAEC1CC051170058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEAEF1CC051170058ACF1 /* SwifteriOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifteriOSTests.xctest;
+			remoteRef = B22BEAEE1CC051170058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B22BEAF11CC051170058ACF1 /* SwifterOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifterOSXTests.xctest;
+			remoteRef = B22BEAF01CC051170058ACF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B22BEAB51CC050320058ACF1 /* Resources */ = {
@@ -130,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22BEAC31CC050BD0058ACF1 /* DrChrono.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,28 +476,33 @@
 		B22BEAC01CC050320058ACF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DrChronoSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.drchrono.com.DrChronoSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B22BEAC11CC050320058ACF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DrChronoSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.drchrono.com.DrChronoSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +529,7 @@
 				B22BEAC11CC050320058ACF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

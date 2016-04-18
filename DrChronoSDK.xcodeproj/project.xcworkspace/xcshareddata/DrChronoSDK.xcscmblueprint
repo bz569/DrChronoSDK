@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "75224C288D14A799245F99223249EF48FF5DC280" : 0,
+    "A65BCAA9B7A77500BBF95593800C3F1B9D215F5E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5B6C9AD4-BD3B-4CC4-A189-873271C4693B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "75224C288D14A799245F99223249EF48FF5DC280" : "DrChronoSDK\/Externals\/swifter\/",
+    "A65BCAA9B7A77500BBF95593800C3F1B9D215F5E" : "DrChronoSDK\/Externals\/OAuthSwift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DrChronoSDK",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DrChronoSDK.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/httpswift\/swifter",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "75224C288D14A799245F99223249EF48FF5DC280"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/OAuthSwift\/OAuthSwift",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A65BCAA9B7A77500BBF95593800C3F1B9D215F5E"
+    }
+  ]
+}
