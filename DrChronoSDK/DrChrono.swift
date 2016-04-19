@@ -19,25 +19,30 @@ public class DrChrono: NSObject {
     public typealias HTTPSuccessHandler = (json: AnyObject, response: NSURLResponse) -> ()
     public typealias HTTPFailureHandler = (error: NSError) -> ()
 
+    /// The port that the temporary http server listen to
     public var localHTTPPort: Int = 9080
+    /// By default the authorize URL will be opened in the external web browser, but apple *don't* allow it for app-store iOS app.
+    /// To change this behavior you must set an `OAuthSwiftURLHandlerType`, simple protocol to handle an `NSURL`
+    /// And you can get a safari controller to handle authroize url (iOS 9) by
+    ///     Drchrono.getSafariURLHandler(self)
     public var authorizeURLHandler: OAuthSwiftURLHandlerType?
+    /// The OAuth2Swift object
     public var oauth: OAuth2Swift?
 
-    public static let shared = DrChrono()
     public static func getSafariURLHandler(viewController: UIViewController) -> OAuthSwiftURLHandlerType? {
         if #available(iOS 9, *) {
             return SafariURLHandler(viewController: viewController)
         } else { return nil }
     }
 
-    private let baseURL = "https://drchrono.com"
-    private var clientID: String?
-    private var clientSecret: String?
+    /**
+     Get an instance of DrChrono.
 
-    override init() {
-         super.init()
-    }
+     - parameter clientID:     The clientID of your app
+     - parameter clientSecret: The clientSecret of your app
 
+     - returns: An instance of Drchrono
+     */
     public init(clientID: String, clientSecret: String) {
         self.clientID = clientID
         self.clientSecret = clientSecret
@@ -50,6 +55,13 @@ public class DrChrono: NSObject {
             responseType: "code")
     }
 
+    /**
+     Set the clientID and clientSecret for the singleton instance of Drchrono.
+     For the clientID and clientSecret you can get it from the api management page on drchrono.com
+
+     - parameter clientID:     The clientID of your app
+     - parameter clientSecret: The clientSecret of your app
+     */
     public func set(clientID: String, clientSecret: String) {
         self.clientID = clientID
         self.clientSecret = clientSecret
@@ -61,6 +73,16 @@ public class DrChrono: NSObject {
             responseType: "code")
     }
 
+    /**
+     OAuth2.0 authentication
+
+     - parameter callBackURLScheme: the redirect URL set in the api management page
+     - parameter scope:             OAuth scope
+     - parameter state:             OAuth state
+     - parameter params:            parameters
+     - parameter success:           success handler
+     - parameter failure:           failure handler
+     */
     public func authentication(callBackURLScheme: String, scope: String, state: String, params: [String: String] = [:], success: TokenSuccessHandler, failure: FailureHandler) {
         guard let oauthSwift = oauth else {
             failure(error: NSError(domain: "DrchronoSDK", code: -1, userInfo: [NSLocalizedDescriptionKey: "DrChrono SDK has Not been set"]))
@@ -98,6 +120,15 @@ public class DrChrono: NSObject {
         }
     }
 
+    // MARK: - Private variables
+    private let baseURL = "https://drchrono.com"
+    private var clientID: String?
+    private var clientSecret: String?
+    internal static let shared = DrChrono()
+
+    override init() {
+        super.init()
+    }
 }
 
 // MARK: - Request
@@ -187,13 +218,21 @@ extension DrChrono {
         request(endPoint, method: .PATCH, parameters: parameters, headers: headers, checkTokenExpiration: checkTokenExpiration, success: success, failure: failure)
     }
 
+    /// Get the oauth token and secret token
     public var token: (token: String, secretToken: String)? {
         guard let oauth = oauth else { return nil }
         return (oauth.client.credential.oauth_token, oauth.client.credential.oauth_token_secret)
     }
 
+    /// Get the credential instance which stores the toekn and secret token
     public var credential: OAuthSwiftCredential? { return oauth?.client.credential }
 
+    /**
+     Restore the token
+
+     - parameter token:       token
+     - parameter secretToken: secret token
+     */
     public func restoreToken(token: String, secretToken: String) {
         oauth?.client.credential.oauth_token = token
         oauth?.client.credential.oauth_token_secret = secretToken
@@ -203,16 +242,42 @@ extension DrChrono {
 
 // MARK: - Convenient Singleton Methods
 extension DrChrono {
+    /**
+     Set the clientID and clientSecret for the singleton instance of Drchrono.
+     For the clientID and clientSecret you can get it from the api management page on drchrono.com
 
+     - parameter clientID:     The clientID of your app
+     - parameter clientSecret: The clientSecret of your app
+     */
     public static func set(clientID: String, clientSecret: String) {
         shared.set(clientID, clientSecret: clientSecret)
     }
 
+    //// By default the authorize URL will be opened in the external web browser, but apple *don't* allow it for app-store iOS app.
+    /// To change this behavior you must set an `OAuthSwiftURLHandlerType`, simple protocol to handle an `NSURL`
+    /// And you can get a safari controller to handle authroize url (iOS 9) by
+    ///     Drchrono.getSafariURLHandler(self)
     public static var authorizeURLHandler: OAuthSwiftURLHandlerType? {
         set { shared.authorizeURLHandler = newValue }
         get { return shared.authorizeURLHandler }
     }
 
+    /// The port that the temporary http server listen to
+    public static var localHTTPPort: Int {
+        set { shared.localHTTPPort = newValue }
+        get { return shared.localHTTPPort }
+    }
+
+    /**
+     OAuth2.0 authentication
+
+     - parameter callBackURLScheme: the redirect URL set in the api management page
+     - parameter scope:             OAuth scope
+     - parameter state:             OAuth state
+     - parameter params:            parameters
+     - parameter success:           success handler
+     - parameter failure:           failure handler
+     */
     public static func authentication(callBackURLScheme: String, scope: String, state: String, params: [String: String] = [:], success: TokenSuccessHandler, failure: FailureHandler) {
         shared.authentication(callBackURLScheme, scope: scope, state: state, success: success, failure: failure)
     }
@@ -268,16 +333,25 @@ extension DrChrono {
         shared.request(endPoint, method: .DELETE, parameters: parameters, headers: headers, checkTokenExpiration: checkTokenExpiration, success: success, failure: failure)
     }
 
+    /// Get the oauth token and secret token
     public static var token: (token: String, secretToken: String)? {
        return shared.token
     }
 
+    /// Get the credential instance which stores the toekn and secret token
     public static var credential: OAuthSwiftCredential? { return shared.credential }
 
+    /**
+     Restore the token
+
+     - parameter token:       token
+     - parameter secretToken: secret token
+     */
     public static func restoreToken(token: String, secretToken: String) {
         shared.restoreToken(token, secretToken: secretToken)
     }
 }
+
 
 class LocalHTTP {
 
@@ -303,14 +377,3 @@ class LocalHTTP {
     func start() throws { try server.start(port) }
     func stop() { server.stop() }
 }
-
-
-
-
-
-
-
-
-
-
-
